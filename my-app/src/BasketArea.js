@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import propTypes from 'prop-types';
+import GroceriesList from './GroceriesList'
+import BasketList from './BasketList'
 
 
-function Header(props) {
+function BasketArea(props) {
 
    
 
     return (
         <div>
-           <h1>Header</h1>
+           <h1>BasketArea</h1>
+           <GroceriesList/>
+           <BasketList/>    
         </div>
     );
 }
 
-// Header.propTypes = {
+// BasketArea.propTypes = {
 //     buttonClick: propTypes.oneOfType([propTypes.func, propTypes.string]),
 //     initialNum: propTypes.number,
 // }
-export default Header;
+export default BasketArea;

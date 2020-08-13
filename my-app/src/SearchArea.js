@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import propTypes from 'prop-types';
 
 
-function Header(props) {
+function SearchArea(props) {
 
    
 
     return (
         <div>
-           <h1>Header</h1>
+           <h1>SearchArea</h1>
         </div>
     );
 }
 
-// Header.propTypes = {
+// SearchArea.propTypes = {
 //     buttonClick: propTypes.oneOfType([propTypes.func, propTypes.string]),
 //     initialNum: propTypes.number,
 // }
-export default Header;
+export default SearchArea;
