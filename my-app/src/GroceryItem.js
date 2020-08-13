@@ -4,17 +4,20 @@ import propTypes from 'prop-types';
 
 function GroceryItem(props) {
 
-   
+    let itemConteiner = []
+    props.items.forEach(element => {
+       // debugger
+        itemConteiner.push(<li key = {element}>
+            <button onClick={() => props.addItem(element)}>+</button>
+            <span>{element}</span>
+        </li>)
+    });
 
     return (
         <div>
-           <h1>GroceryItem</h1>
+            <ol>{itemConteiner}</ol>
         </div>
     );
 }
 
-// GroceryItem.propTypes = {
-//     buttonClick: propTypes.oneOfType([propTypes.func, propTypes.string]),
-//     initialNum: propTypes.number,
-// }
 export default GroceryItem;

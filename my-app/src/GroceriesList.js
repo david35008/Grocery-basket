@@ -5,12 +5,19 @@ import GroceryItem from './GroceryItem'
 
 function GroceriesList(props) {
 
-   
+    const items = [
+        'Strawberry','Blueberry','Orange','Banana','Apple','Carrot','Celery','Mushroom','Green Pepper',
+        'Eggs','Cheese','Butter','Chicken','Beef','Pork','Fish','Rice','Pasta','Bread']
+
+        const addItem = (item) => {
+            alert(item)
+            //sendItemToBasket
+        }
 
     return (
         <div>
-           <h1>GroceriesList</h1>
-           <GroceryItem/>
+           <h3>Groceries</h3>
+           <GroceryItem addItem = {addItem} items = {items}/>
         </div>
     );
 }

@@ -12,7 +12,7 @@ function BasketArea(props) {
         <div>
            <h1>BasketArea</h1>
            <GroceriesList/>
-           <BasketList/>    
+           {/* <BasketList/>     */}
         </div>
     );
 }
