@@ -4,11 +4,15 @@ import propTypes from 'prop-types';
 
 function SearchArea(props) {
 
-   
+
+    const onInputChange = event => {
+        props.searchItem(event.target.value);
+    }
 
     return (
         <nav>
-           <h1>SearchArea</h1>
+            <span>You can serach here:</span>
+            <input onChange={onInputChange} placeholder='Item Name...' value={props.serachPlaceHolder}></input>
         </nav>
     );
 }
@@ -17,4 +21,4 @@ function SearchArea(props) {
 //     buttonClick: propTypes.oneOfType([propTypes.func, propTypes.string]),
 //     initialNum: propTypes.number,
 // }
-export default SearchArea;
+export default SearchArea;  

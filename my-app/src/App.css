@@ -22,6 +22,11 @@ nav {
     background-color: pink;
     padding: 20px;
     border-radius: 5px;
+    width: 500px;
+}
+
+h1 {
+    margin: 0px 0px 0px 0px;
 }
 
 .main {
@@ -37,6 +42,10 @@ ol {
     margin: 0;
 }
 
+#searchButton {
+    position: absolute;
+    margin: -72px 0px 0px 170px ;
+}
 
 ol li {
     width: 250px;
