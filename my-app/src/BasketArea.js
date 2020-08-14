@@ -15,26 +15,25 @@ function BasketArea() {
     ]);
 
     const addNewItem = (newItem) => {
-        addedLastItem.some((item, i) => item.name === newItem) ?
-            setAddedItemList(() => {
-                let newList = addedLastItem.slice()
-                newList[addedLastItem.findIndex(item => item.name === newItem)].amount += 0.5;
-                return newList
-
-            }) :
-            setAddedItemList(() => {
-                let newList = addedLastItem.concat(Array({ name: newItem, amount: 1 }
-                ))
-                return newList
-
-            });
+        let stop = false;
+        let cloneList = addedLastItem.slice();
+        cloneList.forEach((item) => {
+            if (item.name === newItem) {
+                item.amount++;
+                stop = true;
+            }
+        });
+        if (stop) { setAddedItemList(cloneList) }
+        else {
+            cloneList.push({ name: newItem, amount: 1 })
+            setAddedItemList(cloneList);
+        }
     }
 
-
     return (
-        <div id="basketArea">
+        <div className="main">
             <GroceriesList plusItem={addNewItem} />
-            <BasketList newItem = {addedLastItem}/>
+            <BasketList newItem={addedLastItem} />
         </div>
     );
 }

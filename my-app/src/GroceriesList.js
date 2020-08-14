@@ -8,15 +8,11 @@ function GroceriesList(props) {
     const items = [
         'Strawberry','Blueberry','Orange','Banana','Apple','Carrot','Celery','Mushroom','Green Pepper',
         'Eggs','Cheese','Butter','Chicken','Beef','Pork','Fish','Rice','Pasta','Bread']
-
-        const addItem = (item) => {
-            props.plusItem(item)
-        }
-
+     
     return (
         <div>
            <h3>Groceries</h3>
-           <GroceryItem addItem = {addItem} items = {items}/>
+           <GroceryItem addItem = {props.plusItem} items = {items}/>
         </div>
     );
 }
