@@ -10,8 +10,7 @@ function GroceriesList(props) {
         'Eggs','Cheese','Butter','Chicken','Beef','Pork','Fish','Rice','Pasta','Bread']
 
         const addItem = (item) => {
-            alert(item)
-            //sendItemToBasket
+            props.plusItem(item)
         }
 
     return (
@@ -22,8 +21,4 @@ function GroceriesList(props) {
     );
 }
 
-// GroceriesList.propTypes = {
-//     buttonClick: propTypes.oneOfType([propTypes.func, propTypes.string]),
-//     initialNum: propTypes.number,
-// }
 export default GroceriesList;
