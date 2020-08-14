@@ -8,6 +8,7 @@ function BasketList(props) {
 
     return (
         <div>
+            <button onClick={() => props.clearBasket()}>clear</button>
             <h3>Basket</h3>
             <BasketItem addedItemsList={props.addedItemsList} itemChecked={props.itemChecked} />
         </div>
