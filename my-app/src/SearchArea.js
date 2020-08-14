@@ -7,9 +7,9 @@ function SearchArea(props) {
    
 
     return (
-        <div>
-           {/* <h1>SearchArea</h1> */}
-        </div>
+        <nav>
+           <h1>SearchArea</h1>
+        </nav>
     );
 }
 

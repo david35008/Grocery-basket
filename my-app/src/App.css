@@ -1,0 +1,71 @@
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.App .App-header {
+    background-color: #222;
+    height: 186px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+nav {
+    border: 1px solid red;
+    align-self: center;
+    margin: 30px;
+    background-color: pink;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+ol {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    /* display: block; */
+    /* list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px; */
+}
+
+ol li {
+    text-align: left;
+    list-style: none;
+    margin: 7px 0;
+    padding: 10px;
+}
+
+ol li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ol li:nth-child(2n) {
+    background: #efefef;
+}
+
+.Footer {
+    height: 150px;
+    background-color: #222;
+    margin: 20px 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
