@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import propTypes from 'prop-types';
 
-
 function BasketItem(props) {
 
-   
+    let addedItemList = props.newItem
+    let newList1 = []
+    addedItemList.forEach(element => {
+        newList1.push((<li>
+            <button>-</button>
+        <span>{element.amount}{element.name}</span>
+        </li>))
+    })
 
     return (
         <div>
-           <h1>BasketItem</h1>
+            <ol>{newList1}</ol>
         </div>
     );
 }
 
-// GroceryItem.propTypes = {
-//     buttonClick: propTypes.oneOfType([propTypes.func, propTypes.string]),
-//     initialNum: propTypes.number,
-// }
 export default BasketItem;

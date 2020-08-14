@@ -34,7 +34,7 @@ function BasketArea() {
     return (
         <div id="basketArea">
             <GroceriesList plusItem={addNewItem} />
-            {/* <BasketList newItem = {addedLastItem}/> */}
+            <BasketList newItem = {addedLastItem}/>
         </div>
     );
 }
