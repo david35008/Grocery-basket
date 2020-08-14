@@ -3,12 +3,9 @@ import propTypes from 'prop-types';
 import BasketItem from './BasketItem'
 
 function BasketList(props) {
-
-    const [items, setItems] = useState(props.items)
-
     return (
         <div>
-            <button onClick={() => props.clearBasket()}>clear</button>
+            <button className='clearButton' onClick={() => props.clearBasket()}></button>
             <h3>Basket</h3>
             <BasketItem addedItemsList={props.addedItemsList} itemChecked={props.itemChecked} />
         </div>

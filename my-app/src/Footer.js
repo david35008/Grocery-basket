@@ -8,7 +8,8 @@ function Footer(props) {
 
     return (
         <div className='Footer'>
-           <h1>Footer</h1>
+            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Copyright.svg/1200px-Copyright.svg.png' width="50" height="50"/>
+           <span>David Diamant</span>
         </div>
     );
 }

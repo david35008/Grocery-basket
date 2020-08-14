@@ -22,7 +22,6 @@ nav {
     background-color: pink;
     padding: 20px;
     border-radius: 5px;
-    width: 500px;
 }
 
 h1 {
@@ -42,12 +41,8 @@ ol {
     margin: 0;
 }
 
-#searchButton {
-    position: absolute;
-    margin: -72px 0px 0px 170px ;
-}
-
 ol li {
+    cursor: pointer;
     width: 250px;
     text-align: left;
     list-style: none;
@@ -64,10 +59,34 @@ ol li:nth-child(2n) {
 }
 
 .Footer {
+    font-weight: bold;
+    color: ivory;
+    font-size: 30px;
     height: 150px;
     background-color: #222;
     margin: 20px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.Footer span {
+    margin-left: 10px;
+}
+
+.clearButton {
+    position: absolute;
+    margin: 20px 0px 0px 100px ;
+    background-image: url('https://www.iconsdb.com/icons/preview/color/FF9696/trash-10-xxl.png');
+    background-size: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.clearButton:hover {
+    background-image: url('https://www.iconsdb.com/icons/preview/red/trash-10-xxl.png');
 }
