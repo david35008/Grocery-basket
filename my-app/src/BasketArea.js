@@ -1,39 +1,47 @@
 import React, { useState } from 'react';
-import './BasketArea.css';
 import propTypes from 'prop-types';
 import GroceriesList from './GroceriesList'
 import BasketList from './BasketList'
 
 function BasketArea() {
 
-    const [addedLastItem, setAddedItemList] = useState([
-        { name: 'Strawberry', amount: 3 },
-        { name: 'Blueberry', amount: 3 },
-        { name: 'Orange', amount: 3 },
-        { name: 'Banana', amount: 3 },
-        { name: 'Apple', amount: 3 },
+    const [addedItemsList, setAddedItemList] = useState([
+        { name: 'Strawberry', amount: 3, checked: false },
+        { name: 'Blueberry', amount: 3, checked: false },
+        { name: 'Orange', amount: 3, checked: false },
+        { name: 'Banana', amount: 3, checked: false },
+        { name: 'Apple', amount: 3, checked: false },
     ]);
 
     const addNewItem = (newItem) => {
-        let stop = false;
-        let cloneList = addedLastItem.slice();
+        let ifExist = false;
+        let cloneList = addedItemsList.slice();
         cloneList.forEach((item) => {
             if (item.name === newItem) {
                 item.amount++;
-                stop = true;
+                ifExist = true;
             }
         });
-        if (stop) { setAddedItemList(cloneList) }
+        if (ifExist) { setAddedItemList(cloneList) }
         else {
-            cloneList.push({ name: newItem, amount: 1 })
+            cloneList.push({ name: newItem, amount: 1, checked: false})
             setAddedItemList(cloneList);
         }
     }
 
+    const itemChecked = (itemName) => {
+        let cloneList = addedItemsList.slice()
+        cloneList.forEach((item) => {
+            if (item.name === itemName) {
+                item.checked ? item.checked = false : item.checked = true
+            }
+    });  setAddedItemList(cloneList)  
+}
+
     return (
         <div className="main">
             <GroceriesList plusItem={addNewItem} />
-            <BasketList newItem={addedLastItem} />
+            <BasketList addedItemsList={addedItemsList} itemChecked={itemChecked} />
         </div>
     );
 }

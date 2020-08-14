@@ -3,20 +3,26 @@ import propTypes from 'prop-types';
 
 function BasketItem(props) {
 
-    let addedItemList = props.newItem
-    let newList1 = []
-    addedItemList.forEach(element => {
-        newList1.push((<li>
-            <button>-</button>
-        <span>{element.amount}{element.name}</span>
-        </li>))
-    })
+
+    let baketList = [];
+    props.addedItemsList.forEach(item => {
+        let spanStyle;
+        if(item.checked) {
+           spanStyle = {textDecoration: 'line-through'};
+       } else {
+           spanStyle = {textDecoration:'none'};
+       };
+            baketList.push((<li onClick={() => props.itemChecked(item.name)}>
+            <button >-</button>
+        <span style={spanStyle}>{item.amount} {item.name}</span>
+        </li>));
+    });
 
     return (
         <div>
-            <ol>{newList1}</ol>
+            <ol>{baketList}</ol>
         </div>
     );
-}
+};
 
 export default BasketItem;

@@ -7,8 +7,8 @@ function GroceryItem(props) {
     let itemConteiner = []
     props.items.forEach(element => {
        // debugger
-        itemConteiner.push(<li key = {element}>
-            <button onClick={() => props.addItem(element)}>+</button>
+        itemConteiner.push(<li key = {element} onClick={() => props.addItem(element)}>
+            <button >+</button>
             <span>{element}</span>
         </li>)
     });

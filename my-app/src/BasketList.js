@@ -4,12 +4,12 @@ import BasketItem from './BasketItem'
 
 function BasketList(props) {
 
-   const [items, setItems] = useState(props.items)
+    const [items, setItems] = useState(props.items)
 
     return (
         <div>
-           <h3>Basket</h3>
-           <BasketItem newItem = {props.newItem}/>
+            <h3>Basket</h3>
+            <BasketItem addedItemsList={props.addedItemsList} itemChecked={props.itemChecked} />
         </div>
     );
 }
