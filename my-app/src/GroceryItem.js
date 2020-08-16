@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import propTypes from 'prop-types';
 import AddBoxOutlinedIcon from '@material-ui/icons/AddBoxOutlined';
 
 
@@ -14,20 +13,16 @@ function GroceryItem(props) {
             event.currentTarget.firstChild.style.color = 'green';
         }
     }
-    let itemConteiner = []
-    props.items.forEach(item => {
-        itemConteiner.push(<li key={item} onClick={() => props.addItem(item)}
-            onMouseOver={(event) => switchColor(event)}
-            onMouseOut={(event) => switchColor(event)}>
-            <AddBoxOutlinedIcon style={iconStyle} />
-            <span >{item}</span>
-        </li>)
-    });
+    let createNewItem = <li key={props.item} onClick={() => props.addNewItem(props.item)}
+        onMouseOver={(event) => switchColor(event)}
+        onMouseOut={(event) => switchColor(event)}>
+        <AddBoxOutlinedIcon style={iconStyle} />
+        <span >{props.item}</span>
+    </li>
+
 
     return (
-        <div>
-            <ol>{itemConteiner}</ol>
-        </div>
+        createNewItem
     );
 }
 

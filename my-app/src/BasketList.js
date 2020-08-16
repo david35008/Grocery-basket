@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import propTypes from 'prop-types';
 import BasketItem from './BasketItem'
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -7,17 +6,28 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 function BasketList(props) {
 
-  
-    const [style, setStyle] = useState({color: '#FF7D7D'})
+    const [style, setStyle] = useState({ color: '#FF7D7D' })
+
+    let baketList = [];
+    props.addedItemsList.forEach(item => {
+        let spanStyle;
+        if (item.checked) {
+            spanStyle = { textDecoration: 'line-through' };
+        } else {
+            spanStyle = { textDecoration: 'none' };
+        };
+        baketList.push(<BasketItem itemChecked={props.itemChecked} spanStyle={spanStyle} item={item} />)
+    })
+
     return (
         <div>
             <div className='listName'  >
-            <h3><ShoppingBasketIcon style={{height: '22px', width: '22px', marginBottom: '-4px'}}/>Basket</h3>
-            <IconButton aria-label="delete" style={style}>
-            <DeleteIcon  onClick={() => props.clearBasket()}   onMouseOver={() =>setStyle({color: 'red'})} onMouseOut={() =>setStyle({ color: '#FF7D7D'})} className='MuiRating-iconHover' />
-            </IconButton>
+                <h3><ShoppingBasketIcon className='ShoppingBasketIcon' />Basket</h3>
+                <IconButton aria-label="delete" style={style} onClick={() => props.setAddedItemList([{ name: 'Your basket is empty!' }])}>
+                    <DeleteIcon onMouseOver={() => setStyle({ color: 'red' })} onMouseOut={() => setStyle({ color: '#FF7D7D' })} />
+                </IconButton>
             </div>
-            <BasketItem addedItemsList={props.addedItemsList}/>
+            <ol>{baketList}</ol>
         </div>
     );
 }
