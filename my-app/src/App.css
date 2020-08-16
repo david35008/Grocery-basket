@@ -16,16 +16,25 @@
 }
 
 nav {
-    border: 1px solid red;
-    align-self: center;
-    margin: 30px;
-    background-color: pink;
+    margin: 30px auto 30px auto;
+    width: 40%;
     padding: 20px;
+    border: 1px solid red;
+    background-color: pink;
     border-radius: 5px;
 }
 
 h1 {
     margin: 0px 0px 0px 0px;
+}
+
+.listName {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+h3 {
+    text-align: left;
 }
 
 .main {
@@ -72,21 +81,4 @@ ol li:nth-child(2n) {
 
 .Footer span {
     margin-left: 10px;
-}
-
-.clearButton {
-    position: absolute;
-    margin: 20px 0px 0px 100px ;
-    background-image: url('https://www.iconsdb.com/icons/preview/color/FF9696/trash-10-xxl.png');
-    background-size: 100%;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.clearButton:hover {
-    background-image: url('https://www.iconsdb.com/icons/preview/red/trash-10-xxl.png');
 }

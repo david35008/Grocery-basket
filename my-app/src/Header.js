@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import propTypes from 'prop-types';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 
 function Header(props) {
@@ -8,7 +9,7 @@ function Header(props) {
 
   return (
     <div className='App-header'>
-      <img src='https://www.iconsdb.com/icons/preview/white/shopping-basket-xxl.png' width="150" height="150" />
+                <ShoppingBasketIcon style={{height: '150px', width: '150px', color: 'white'}}/>
       <h1  >Hello, Basket!</h1>
     </div>
   );
