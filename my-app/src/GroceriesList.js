@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GroceryItem from './GroceryItem'
 import EcoIcon from '@material-ui/icons/Eco';
 
@@ -15,8 +15,8 @@ function GroceriesList(props) {
     }
 
     let itemConteiner = []
-    props.itemsToSend.forEach(item => {
-        itemConteiner.push(<GroceryItem item={item} addNewItem={props.addNewItem} />)
+    props.itemsToSend.forEach((item, index) => {
+        itemConteiner.push(<GroceryItem item={item} key={item+index} addNewItem={props.addNewItem} index={index} />)
     })
 
     return (

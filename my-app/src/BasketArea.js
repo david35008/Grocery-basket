@@ -1,4 +1,4 @@
-import React, { useState, Children } from 'react';
+import React, { useState } from 'react';
 import SearchArea from './SearchArea'
 import GroceriesList from './GroceriesList'
 import BasketList from './BasketList'

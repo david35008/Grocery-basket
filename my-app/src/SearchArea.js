@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import propTypes from 'prop-types';
+import React from 'react';
 
 function SearchArea(props) {
-
 
     const items = props.staticItemsList.slice();
 

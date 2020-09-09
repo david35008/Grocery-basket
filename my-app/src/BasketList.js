@@ -9,14 +9,14 @@ function BasketList(props) {
     const [style, setStyle] = useState({ color: '#FF7D7D' })
 
     let baketList = [];
-    props.addedItemsList.forEach(item => {
+    props.addedItemsList.forEach((item , index) => {
         let spanStyle;
         if (item.checked) {
             spanStyle = { textDecoration: 'line-through' };
         } else {
             spanStyle = { textDecoration: 'none' };
         };
-        baketList.push(<BasketItem itemChecked={props.itemChecked} spanStyle={spanStyle} item={item} />)
+        baketList.push(<BasketItem key={item+index} itemChecked={props.itemChecked} spanStyle={spanStyle} item={item} index={index} />)
     })
 
     return (

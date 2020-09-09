@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
-import propTypes from 'prop-types';
+import React from 'react';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
-
 function Header(props) {
-
-
 
   return (
     <div className='App-header'>
@@ -15,8 +11,4 @@ function Header(props) {
   );
 }
 
-// Header.propTypes = {
-//     buttonClick: propTypes.oneOfType([propTypes.func, propTypes.string]),
-//     initialNum: propTypes.number,
-// }
 export default Header;
