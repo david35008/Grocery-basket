@@ -1,0 +1,89 @@
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.App .App-header {
+    background-color: #222;
+    height: 186px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+nav {
+    margin: 30px auto 30px auto;
+    width: 40%;
+    padding: 20px;
+    border: 1px solid red;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0px 0px 0px 0px;
+}
+.ShoppingBasketIcon {
+    height: 22px;
+    width: 22px;
+    margin-bottom: -4px
+}
+
+.listName {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+h3 {
+    text-align: left;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+ol {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+ol li {
+    cursor: pointer;
+    width: 250px;
+    text-align: left;
+    list-style: none;
+    margin: 7px 0;
+    padding: 10px;
+}
+
+ol li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ol li:nth-child(2n) {
+    background: #efefef;
+}
+
+.Footer {
+    font-weight: bold;
+    color: ivory;
+    font-size: 30px;
+    height: 150px;
+    background-color: #222;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer span {
+    margin-left: 10px;
+}
